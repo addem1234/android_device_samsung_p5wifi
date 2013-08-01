@@ -16,16 +16,16 @@
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-# Include p5-common
+# Include p4-common
 -include device/samsung/p4-common/BoardConfigCommon.mk
 
 # Use the non-open-source parts, if they're present
 -include vendor/samsung/p5wifi/BoardConfigVendor.mk
 
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 699744256
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 14080704512
+
 TARGET_OTA_ASSERT_DEVICE := p5wifi,p5,GT-P7300,GT-P7310
 
 TARGET_KERNEL_SOURCE := kernel/samsung/p5
 TARGET_KERNEL_CONFIG := cyanogenmod_p5wifi_defconfig
-
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 699744256
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 14080704512
